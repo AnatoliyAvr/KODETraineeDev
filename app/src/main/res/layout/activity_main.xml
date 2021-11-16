@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".presentation.ui.main.MainActivity">
+
+  <com.google.android.material.appbar.AppBarLayout
+    android:id="@+id/app_bar_layout"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    app:elevation="0dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <include
+      android:id="@+id/include"
+      layout="@layout/search_view_layout" />
+
+  </com.google.android.material.appbar.AppBarLayout>
+
+  <com.google.android.material.tabs.TabLayout
+    android:id="@+id/tab_layout"
+    style="@style/customTabLayout"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+    app:tabIndicatorColor="#6534FF"
+    app:tabMode="scrollable"
+    app:textAllCaps="false" />
+
+  <androidx.viewpager2.widget.ViewPager2
+    android:id="@+id/viewpager"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_anchorGravity="bottom"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tab_layout"
+    app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
